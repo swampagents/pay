@@ -1,0 +1,7 @@
+{
+  "label": "PRIVACY",
+  "title": "Zero Knowledge",
+  "description": "Transaction data never touches our servers. No customer profiles. No behavioral analytics. Payment processing without the panopticon.",
+  "icon": "⬢",
+  "order": 4
+}

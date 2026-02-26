@@ -1,0 +1,115 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Dossier — SWAMP PAY" description="The mission and personnel behind SWAMP PAY sovereign payment terminals.">
+  <section class="relative min-h-[60vh] overflow-hidden border-b border-olive/20 bg-midnight pt-24 pb-24">
+    <img
+      src="/base.jpg"
+      alt=""
+      class="war-photo-bg-hero"
+      style="object-position: center 40%;"
+      loading="eager"
+      aria-hidden="true"
+    />
+    <div class="war-photo-overlay-light" aria-hidden="true"></div>
+    <div class="film-grain absolute inset-0 z-[2]" aria-hidden="true"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-6">
+      <div class="mb-4 flex items-center gap-4">
+        <span class="stamp-classified text-xs text-napalm">Declassified</span>
+        <span class="h-px flex-1 bg-khaki/20" aria-hidden="true"></span>
+      </div>
+      <h1 class="font-stencil text-5xl tracking-wide text-white sm:text-6xl lg:text-7xl">
+        The Mission<br />
+        <span class="text-phosphor crt-glow">Behind SWAMP</span>.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg text-bone/90">
+        We build payment infrastructure that treats surveillance as a design flaw,
+        not a feature. This is the dossier.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-olive/20 bg-bunker py-24" aria-label="Mission">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid gap-16 lg:grid-cols-2">
+        <div>
+          <p class="section-label-military">Mission Statement</p>
+          <h2 class="font-stencil text-3xl text-white">
+            Financial privacy is a<br />
+            <span class="text-amber crt-glow-amber">fundamental right</span>.
+          </h2>
+          <p class="mt-6 text-lg leading-relaxed text-smoke">
+            SWAMP PAY was founded on a simple principle: the act of buying a cup of
+            coffee should not generate a permanent, searchable record of your location,
+            preferences, and habits.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-smoke">
+            We engineer payment systems that process transactions without collecting
+            the data that makes surveillance capitalism possible. Not through policies
+            that can change — through architecture that can't. Like fortifying a firebase.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded border border-olive/20 bg-midnight/60 p-6">
+            <p class="font-stencil text-xs text-khaki">[PRINCIPLE 01]</p>
+            <h3 class="mt-2 font-stencil text-lg text-white">OPSEC by Architecture</h3>
+            <p class="mt-2 text-sm text-smoke">
+              What's better than privacy policies — writing code that makes data collection
+              technically impossible. Architecture over promises. Fortification over faith.
+            </p>
+          </div>
+
+          <div class="rounded border border-olive/20 bg-midnight/60 p-6">
+            <p class="font-stencil text-xs text-khaki">[PRINCIPLE 02]</p>
+            <h3 class="mt-2 font-stencil text-lg text-white">Offline First</h3>
+            <p class="mt-2 text-sm text-smoke">
+              Internet goes down, the terminal keeps running. No cloud dependency
+              means no single point of failure — and no one listening on the wire.
+            </p>
+          </div>
+
+          <div class="rounded border border-olive/20 bg-midnight/60 p-6">
+            <p class="font-stencil text-xs text-khaki">[PRINCIPLE 03]</p>
+            <h3 class="mt-2 font-stencil text-lg text-white">Merchant Sovereignty</h3>
+            <p class="mt-2 text-sm text-smoke">
+              Your terminal. Your data. Your customers. We provide infrastructure —
+              not control. No lock-in, no platform dependency, no permission required.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-bunker py-24" id="contact" aria-label="Contact">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <p class="section-label-military mx-auto">Secure Channel — Comms</p>
+      <h2 class="font-stencil text-3xl text-white">Establish Contact</h2>
+      <!-- <p class="mx-auto mt-4 max-w-lg text-lg text-smoke">
+        Encrypted communications preferred. PGP key available on request.
+      </p> -->
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-3">
+        <div class="rounded border border-olive/20 bg-midnight/60 p-6">
+          <p class="font-stencil text-xs text-khaki">GENERAL</p>
+          <p class="mt-2 font-mono text-sm text-phosphor">hello@swamppay.com</p>
+        </div>
+        <div class="rounded border border-olive/20 bg-midnight/60 p-6">
+          <p class="font-stencil text-xs text-khaki">SIGNALS CORPS</p>
+          <p class="mt-2 font-mono text-sm text-phosphor">dev@swamppay.com</p>
+        </div>
+        <div class="rounded border border-olive/20 bg-midnight/60 p-6">
+          <p class="font-stencil text-xs text-khaki">OPSEC</p>
+          <p class="mt-2 font-mono text-sm text-phosphor">security@swamppay.com</p>
+        </div>
+      </div>
+
+      <!-- <p class="mt-8 font-mono text-xs text-khaki/50">
+        <span class="text-phosphor-dim">[PGP]</span> Fingerprint: 4A2B 8C9D EF01 2345 6789 ABCD EF01 2345 6789 ABCD
+      </p> -->
+    </div>
+  </section>
+</Base>

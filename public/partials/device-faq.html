@@ -1,0 +1,40 @@
+<div x-data="{ open: false }" class="border border-phosphor/10 rounded">
+  <button @click="open = !open" class="flex w-full items-center justify-between px-6 py-4 text-left font-display text-sm text-white hover:text-phosphor transition-colors" :aria-expanded="open">
+    Does the SP-700 require internet connectivity?
+    <span class="font-mono text-phosphor transition-transform" :class="open ? 'rotate-45' : ''" aria-hidden="true">+</span>
+  </button>
+  <div x-show="open" x-collapse class="px-6 pb-4 text-sm text-smoke">
+    No. The SP-700 processes all card and crypto transactions locally on the secure enclave. Internet connectivity is only required for optional real-time settlement. When offline, the terminal batches transactions and settles them automatically when connectivity is restored. The terminal can operate indefinitely without internet.
+  </div>
+</div>
+
+<div x-data="{ open: false }" class="border border-phosphor/10 rounded">
+  <button @click="open = !open" class="flex w-full items-center justify-between px-6 py-4 text-left font-display text-sm text-white hover:text-phosphor transition-colors" :aria-expanded="open">
+    What crypto wallets are supported?
+    <span class="font-mono text-phosphor transition-transform" :class="open ? 'rotate-45' : ''" aria-hidden="true">+</span>
+  </button>
+  <div x-show="open" x-collapse class="px-6 pb-4 text-sm text-smoke">
+    Any wallet that supports NFC-based payment protocols. This includes major wallets for Bitcoin (including Lightning Network), Ethereum and all major L2s, USDC across multiple chains, and Monero for fully private transactions.
+  </div>
+</div>
+
+<div x-data="{ open: false }" class="border border-phosphor/10 rounded">
+  <button @click="open = !open" class="flex w-full items-center justify-between px-6 py-4 text-left font-display text-sm text-white hover:text-phosphor transition-colors" :aria-expanded="open">
+    How is the firmware secured?
+    <span class="font-mono text-phosphor transition-transform" :class="open ? 'rotate-45' : ''" aria-hidden="true">+</span>
+  </button>
+  <div x-show="open" x-collapse class="px-6 pb-4 text-sm text-smoke">
+    The SP-700 runs on a hardware secure enclave with a root of trust. Firmware updates are cryptographically signed and verified before installation. The device includes anti-tamper detection that triggers key erasure if physical compromise is attempted. Independent penetration testing is conducted regularly.
+  </div>
+</div>
+
+
+<div x-data="{ open: false }" class="border border-phosphor/10 rounded">
+  <button @click="open = !open" class="flex w-full items-center justify-between px-6 py-4 text-left font-display text-sm text-white hover:text-phosphor transition-colors" :aria-expanded="open">
+    What are the processing fees?
+    <span class="font-mono text-phosphor transition-transform" :class="open ? 'rotate-45' : ''" aria-hidden="true">+</span>
+  </button>
+  <div x-show="open" x-collapse class="px-6 pb-4 text-sm text-smoke">
+    SWAMP PAY charges a flat 0.5% processing fee on fiat transactions. Crypto-to-crypto transactions have zero processing fees — you only pay the network gas fee. No monthly minimums, no hidden charges, no surprise rate increases.
+  </div>
+</div>

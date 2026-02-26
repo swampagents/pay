@@ -1,0 +1,20 @@
+<pre class="font-mono text-sm leading-relaxed"><code class="text-phosphor-dim">// Initialize SWAMP PAY client</code>
+<code class="text-smoke"><span class="text-amber">import</span> { SwampPay } <span class="text-amber">from</span> <span class="text-phosphor">'@swamp/sdk'</span>;</code>
+<code class="text-smoke"></code>
+<code class="text-smoke"><span class="text-amber">const</span> client = <span class="text-amber">new</span> <span class="text-phosphor">SwampPay</span>({</code>
+<code class="text-smoke">  terminalId: <span class="text-phosphor">'SP-700-001'</span>,</code>
+<code class="text-smoke">  encryptionKey: process.env.<span class="text-phosphor">SWAMP_KEY</span>,</code>
+<code class="text-smoke">});</code>
+<code class="text-smoke"></code>
+<code class="text-phosphor-dim">// Process an NFC payment</code>
+<code class="text-smoke"><span class="text-amber">const</span> tx = <span class="text-amber">await</span> client.<span class="text-phosphor">charge</span>({</code>
+<code class="text-smoke">  amount: <span class="text-amber">4200</span>,</code>
+<code class="text-smoke">  currency: <span class="text-phosphor">'USD'</span>,</code>
+<code class="text-smoke">  method: <span class="text-phosphor">'nfc_tap'</span>,</code>
+<code class="text-smoke">});</code>
+<code class="text-smoke"></code>
+<code class="text-phosphor-dim">// Listen for settlement confirmation</code>
+<code class="text-smoke">client.<span class="text-phosphor">on</span>(<span class="text-phosphor">'charge.settled'</span>, (event) => {</code>
+<code class="text-smoke">  console.log(event.id);  <span class="text-phosphor-dim">// tx_7f8a9b...</span></code>
+<code class="text-smoke">  console.log(event.data_retained);  <span class="text-phosphor-dim">// false</span></code>
+<code class="text-smoke">});</code></pre>

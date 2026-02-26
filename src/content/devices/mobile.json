@@ -1,0 +1,14 @@
+{
+  "name": "Mobile Tap-to-Pay",
+  "slug": "mobile-tap",
+  "tagline": "Turn any smartphone into a sovereign terminal",
+  "description": "Transform any NFC-enabled smartphone into a SWAMP PAY terminal. Our white-label mobile app provides the same privacy guarantees as dedicated hardware — on-device processing, ephemeral data, and direct settlement.",
+  "specs": [
+    { "label": "PLATFORMS", "value": "iOS 16+ / Android 12+" },
+    { "label": "INTERFACE", "value": "NFC Contactless" },
+    { "label": "WALLETS", "value": "BTC / ETH / USDC / XMR" },
+    { "label": "BRANDING", "value": "Full White Label Customization" },
+    { "label": "SETTLEMENT", "value": "<200ms via Lightning/L2" }
+  ],
+  "order": 2
+}

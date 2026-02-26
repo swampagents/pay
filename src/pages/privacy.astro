@@ -1,0 +1,171 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="OPSEC — SWAMP PAY" description="How SWAMP PAY eliminates surveillance from payment processing. Zero data retention. On-device encryption.">
+  <section class="relative min-h-[60vh] overflow-hidden border-b border-olive/20 bg-midnight pt-24 pb-24">
+    <img
+      src="/hangingOut.jpg"
+      alt=""
+      class="war-photo-bg-hero"
+      loading="eager"
+      aria-hidden="true"
+    />
+    <div class="war-photo-overlay" aria-hidden="true"></div>
+    <div class="film-grain absolute inset-0 z-[2]" aria-hidden="true"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-6">
+      <div class="mb-4 flex items-center gap-4">
+        <span class="stamp-classified text-xs text-napalm">Classified</span>
+        <span class="h-px flex-1 bg-khaki/20" aria-hidden="true"></span>
+      </div>
+      <h1 class="font-stencil text-5xl tracking-wide text-white sm:text-6xl lg:text-7xl">
+        Anti-Surveillance<br />
+        <span class="text-phosphor crt-glow">by Design</span>.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg text-bone/90">
+        SWAMP PAY doesn't need to protect your data — because it never collects it.
+        This is OPSEC through architecture, not policy.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-olive/20 bg-bunker py-24" aria-label="The problem">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid gap-16 lg:grid-cols-2">
+        <div>
+          <p class="section-label-military">Intelligence Brief — The Enemy</p>
+          <h2 class="font-stencil text-3xl text-white">
+            The surveillance <span class="text-amber crt-glow-amber">economy</span>.
+          </h2>
+          <p class="mt-6 text-lg leading-relaxed text-smoke">
+            Every card swipe feeds a global surveillance apparatus. Payment processors
+            build consumer profiles, sell behavioral data, and enable warrantless
+            financial surveillance. Your purchase history is not your own. They are
+            running recon on every transaction.
+          </p>
+        </div>
+        <div class="terminal-border rounded-lg bg-midnight/60 p-8">
+          <p class="mb-4 font-stencil text-xs text-amber">THREAT ASSESSMENT — TRADITIONAL PAYMENT DATA</p>
+          <div class="space-y-2 font-mono text-sm text-smoke">
+            <p><span class="text-amber">→</span> Card number transmitted to processor</p>
+            <p><span class="text-amber">→</span> Transaction logged with timestamp + location</p>
+            <p><span class="text-amber">→</span> Customer profile updated</p>
+            <p><span class="text-amber">→</span> Behavioral data sold to advertisers</p>
+            <p><span class="text-amber">→</span> Purchase history available to government</p>
+            <p><span class="text-amber">→</span> Data retained for 7+ years</p>
+            <div class="mt-4 border-t border-amber/20 pt-4">
+              <p class="text-napalm font-stencil">EXPOSURE LEVEL: <span class="font-bold">TOTAL COMPROMISE</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative overflow-hidden border-b border-olive/20 bg-midnight py-24" aria-label="Our approach">
+    <img
+      src="/vietnamePic.jpg"
+      alt=""
+      class="war-photo-bg"
+      style="object-position: center 70%;"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    <div class="war-photo-overlay" aria-hidden="true"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-6">
+      <p class="section-label-military">Countermeasures — SWAMP Architecture</p>
+      <h2 class="font-stencil text-3xl text-white">
+        SWAMP PAY <span class="text-phosphor crt-glow">OPSEC</span>.
+      </h2>
+
+      <div class="mt-16 grid gap-px bg-olive/15 md:grid-cols-3">
+        <div class="bg-midnight p-8">
+          <p class="font-stencil text-4xl text-olive/30">01</p>
+          <h3 class="mt-4 font-stencil text-xl text-white">On-Device Processing</h3>
+          <p class="mt-4 text-sm leading-relaxed text-smoke">
+            All transaction logic executes within the terminal's secure enclave.
+            Card data, wallet addresses, and transaction amounts never leave the device
+            in plaintext. Like a sealed field radio — nothing leaks.
+          </p>
+        </div>
+
+        <div class="bg-midnight p-8">
+          <p class="font-stencil text-4xl text-olive/30">02</p>
+          <h3 class="mt-4 font-stencil text-xl text-white">Ephemeral Data Model</h3>
+          <p class="mt-4 text-sm leading-relaxed text-smoke">
+            Transaction records exist only long enough to confirm settlement.
+            Once confirmed, all customer-identifying data is cryptographically
+            shredded. No logs, no profiles, no trail.
+          </p>
+        </div>
+
+        <div class="bg-midnight p-8">
+          <p class="font-stencil text-4xl text-olive/30">03</p>
+          <h3 class="mt-4 font-stencil text-xl text-white">Zero-Knowledge Settlement</h3>
+          <p class="mt-4 text-sm leading-relaxed text-smoke">
+            Settlement data contains only the minimum information required: amount
+            and destination. No customer identity, no purchase details, no metadata.
+            Clean extraction. No trace left behind.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="border-b border-olive/20 bg-bunker py-24" aria-label="Architecture diagram">
+    <div class="mx-auto max-w-4xl px-6">
+      <p class="section-label">// SYSTEM ARCHITECTURE</p>
+      <h2 class="font-stencil text-3xl text-white">Data flow.</h2>
+
+      <div class="mt-12 terminal-border rounded-lg bg-midnight p-8 overflow-x-auto">
+        <pre class="font-mono text-sm leading-loose text-smoke">
+<span class="text-phosphor">┌──────────────────────┐</span>
+<span class="text-phosphor">│   CUSTOMER DEVICE    │</span>
+<span class="text-phosphor">│                      │</span>
+<span class="text-phosphor">│  Card / Phone / Key  │</span>
+<span class="text-phosphor">└──────────┬───────────┘</span>
+           <span class="text-phosphor">│</span> <span class="text-phosphor-dim">NFC / Chip</span>
+           <span class="text-phosphor">▼</span>
+<span class="text-amber">┌──────────────────────┐</span>
+<span class="text-amber">│   SWAMP TERMINAL     │</span>
+<span class="text-amber">│                      │</span>
+<span class="text-amber">│  ┌────────────────┐  │</span>
+<span class="text-amber">│  │ SECURE ENCLAVE  │  │</span>
+<span class="text-amber">│  │                │  │</span>
+<span class="text-amber">│  │ • Decrypt       │  │</span>
+<span class="text-amber">│  │ • Validate      │  │</span>
+<span class="text-amber">│  │ • Authorize     │  │</span>
+<span class="text-amber">│  │ • Encrypt       │  │</span>
+<span class="text-amber">│  │ • PURGE         │  │</span>
+<span class="text-amber">│  └────────────────┘  │</span>
+<span class="text-amber">└──────────┬───────────┘</span>
+           <span class="text-amber">│</span> <span class="text-phosphor-dim">Encrypted Settlement Only</span>
+           <span class="text-amber">▼</span>
+<span class="text-phosphor-dim">┌──────────────────────┐</span>
+<span class="text-phosphor-dim">│  SETTLEMENT LAYER    │</span>
+<span class="text-phosphor-dim">│                      │</span>
+<span class="text-phosphor-dim">│  Amount + Dest ONLY  │</span>
+<span class="text-phosphor-dim">│  No Customer Data    │</span>
+<span class="text-phosphor-dim">│  No Purchase Detail  │</span>
+<span class="text-phosphor-dim">└──────────────────────┘</span></pre>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-3">
+        <div class="rounded border border-olive/15 bg-midnight/60 p-4 text-center">
+          <p class="font-stencil text-2xl text-phosphor">0 bytes</p>
+          <p class="mt-1 font-mono text-xs text-smoke">Customer data retained</p>
+        </div>
+        <div class="rounded border border-olive/15 bg-midnight/60 p-4 text-center">
+          <p class="font-stencil text-2xl text-phosphor">0 profiles</p>
+          <p class="mt-1 font-mono text-xs text-smoke">Customer identities stored</p>
+        </div>
+        <div class="rounded border border-olive/15 bg-midnight/60 p-4 text-center">
+          <p class="font-stencil text-2xl text-phosphor">0 logs</p>
+          <p class="mt-1 font-mono text-xs text-smoke">Transaction histories kept</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+</Base>

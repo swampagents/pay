@@ -1,0 +1,90 @@
+---
+const navLinks = [
+  { href: '/', label: 'HQ' },
+  { href: '/devices', label: 'Field Kit' },
+  { href: '/privacy', label: 'OPSEC' },
+  { href: '/white-label', label: 'White Label' },
+  { href: '/about', label: 'Dossier' },
+];
+const currentPath = Astro.url.pathname;
+---
+<div x-data="{ open: false, scrolled: false }" @scroll.window="scrolled = window.scrollY > 80">
+  <a
+    href="/"
+    class="fixed left-6 top-5 z-50 flex items-center gap-2 rounded-full px-3 py-1.5 text-phosphor crt-glow transition-all duration-300"
+    :class="scrolled ? 'bg-midnight/80 backdrop-blur-sm border border-olive/20' : ''"
+    aria-label="SWAMP PAY home"
+  >
+    <span class="inline-block h-2.5 w-2.5 bg-phosphor" aria-hidden="true"></span>
+    <span class="font-stencil text-sm tracking-wider">SWAMP PAY</span>
+  </a>
+
+  <button
+    class="fixed right-6 top-5 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-olive/30 bg-midnight/80 backdrop-blur-sm transition-colors hover:border-phosphor/40"
+    @click="open = !open"
+    :aria-expanded="open"
+    aria-label="Open navigation"
+  >
+    <span class="flex flex-col gap-1" aria-hidden="true">
+      <span
+        class="block h-px w-4 bg-phosphor transition-all duration-300"
+        :class="open ? 'translate-y-[2.5px] rotate-45' : ''"
+      ></span>
+      <span
+        class="block h-px w-4 bg-phosphor transition-all duration-300"
+        :class="open ? '-translate-y-[2.5px] -rotate-45' : ''"
+      ></span>
+    </span>
+  </button>
+
+  <nav
+    class="fixed inset-0 z-40 flex items-center justify-center bg-midnight/98 backdrop-blur-md"
+    x-show="open"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    @keydown.escape.window="open = false"
+    x-cloak
+    aria-label="Primary navigation"
+  >
+    <div class="tactical-grid-dense absolute inset-0 opacity-20" aria-hidden="true"></div>
+    <div class="film-grain absolute inset-0" aria-hidden="true"></div>
+
+    <div class="relative z-10 text-center">
+      <p class="mb-12 font-mono text-xs text-khaki/50 tracking-widest">NAVIGATION // SELECT DESTINATION</p>
+
+      <ul class="space-y-6" role="list">
+        {navLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class:list={[
+                'block font-stencil text-4xl uppercase tracking-wider transition-colors hover:text-phosphor sm:text-5xl',
+                currentPath === href ? 'text-phosphor crt-glow' : 'text-bone/60',
+              ]}
+              @click="open = false"
+              aria-current={currentPath === href ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div class="barbed-wire mx-auto mt-12 w-48"></div>
+
+      <a href="/devices" class="btn-primary mt-8 inline-flex" @click="open = false">Request Field Kit</a>
+
+      <p class="mt-8 font-mono text-[10px] text-khaki/30">UNCLASSIFIED // FOUO</p>
+    </div>
+
+    <div class="stamp-classified absolute bottom-8 right-8 text-xl text-napalm/20" aria-hidden="true">Classified</div>
+  </nav>
+</div>
+
+<style>
+  [x-cloak] { display: none !important; }
+</style>

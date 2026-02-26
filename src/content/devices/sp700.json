@@ -1,0 +1,12 @@
+{
+  "name": "SP-700 Payment Terminal",
+  "slug": "sp-700",
+  "tagline": "Countertop sovereign payment terminal",
+  "description": "The SP-700 is a countertop payment terminal built around a secure enclave processor. It processes card, NFC, and crypto payments locally — no transaction data ever leaves the device unencrypted.",
+  "specs": [
+    { "label": "PAYMENTS", "value": "NFC / EMV Chip / Magnetic / QR / Crypto" },
+    { "label": "DIMENSIONS", "value": "180 x 85 x 62mm — 340g" },
+    { "label": "POWER", "value": "USB-C PD / PoE 802.3af / 4hr Battery Backup" }
+  ],
+  "order": 1
+}

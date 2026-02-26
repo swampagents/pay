@@ -1,0 +1,7 @@
+{
+  "label": "CRYPTO",
+  "title": "Wallet Native",
+  "description": "Accept payments from any major crypto wallet. On-chain settlement with zero custodial risk. Your keys, your funds.",
+  "icon": "◈",
+  "order": 3
+}

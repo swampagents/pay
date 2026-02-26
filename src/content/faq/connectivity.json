@@ -1,0 +1,6 @@
+{
+  "question": "Does the SP-700 require internet connectivity?",
+  "answer": "No. The SP-700 processes all card and crypto transactions locally on the secure enclave. Internet connectivity is only required for optional real-time settlement. When offline, the terminal batches transactions and settles them automatically when connectivity is restored.",
+  "category": "devices",
+  "order": 1
+}

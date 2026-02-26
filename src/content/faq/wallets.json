@@ -1,0 +1,6 @@
+{
+  "question": "What crypto wallets are supported?",
+  "answer": "Any wallet that supports NFC-based payment protocols. This includes major wallets for Bitcoin (including Lightning Network), Ethereum and all major L2s, USDC across multiple chains, and Monero for fully private transactions. Custom wallet integrations are available through our white-label program.",
+  "category": "devices",
+  "order": 2
+}

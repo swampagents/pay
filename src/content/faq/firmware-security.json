@@ -1,0 +1,6 @@
+{
+  "question": "How is the firmware secured?",
+  "answer": "The SP-700 runs on a hardware secure enclave with a root of trust. Firmware updates are cryptographically signed and verified before installation. The device includes anti-tamper detection that triggers key erasure if physical compromise is attempted. Independent penetration testing is conducted regularly.",
+  "category": "general",
+  "order": 3
+}

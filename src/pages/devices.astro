@@ -1,0 +1,217 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Field Kit — SWAMP PAY" description="Purpose-built payment terminals and mobile tap-to-pay. Hardened field equipment for sovereign commerce.">
+  <section class="relative min-h-[60vh] overflow-hidden border-b border-olive/20 bg-midnight pt-24 pb-24">
+    <img
+      src="/fieldKit.jpg"
+      alt=""
+      class="war-photo-bg-hero"
+      style="object-position: center 30%;"
+      loading="eager"
+      aria-hidden="true"
+    />
+    <div class="war-photo-overlay" aria-hidden="true"></div>
+    <div class="film-grain absolute inset-0 z-[2]" aria-hidden="true"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-6">
+      <div class="mb-4 flex items-center gap-4">
+        <span class="stamp-classified text-xs text-napalm">Classified</span>
+        <span class="h-px flex-1 bg-khaki/20" aria-hidden="true"></span>
+      </div>
+      <h1 class="font-stencil text-5xl tracking-wide text-white sm:text-6xl lg:text-7xl">
+        Field <span class="text-phosphor crt-glow">Kit</span>.
+      </h1>
+      <p class="mt-6 max-w-2xl text-lg text-bone/90">
+        Dedicated hardware engineered for sovereign commerce.
+        No cloud dependency. No data leaks. Built for the jungle.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative overflow-hidden border-b border-olive/20 bg-bunker py-24" aria-label="SP-700 Terminal">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid items-center gap-16 lg:grid-cols-2">
+        <div class="flex items-center justify-center rounded border border-olive/20 bg-midnight/60 p-16">
+          <div class="text-center" aria-hidden="true">
+            <div class="mx-auto flex h-64 w-48 flex-col items-center justify-center rounded-lg border border-olive/30 bg-jungle/10">
+              <div class="mb-4 h-28 w-40 rounded border border-phosphor/20 bg-midnight">
+                <div class="flex h-full items-center justify-center">
+                  <span class="font-stencil text-xs text-phosphor/40">SP-700</span>
+                </div>
+              </div>
+              <div class="mt-2 grid grid-cols-3 gap-1.5 px-4">
+                {Array.from({ length: 12 }).map(() => (
+                  <div class="h-4 w-4 rounded-sm border border-olive/20 bg-jungle/20"></div>
+                ))}
+              </div>
+            </div>
+            <p class="mt-6 font-stencil text-xs text-khaki/60">SP-700 COUNTERTOP TERMINAL</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="stamp-classified text-xs text-phosphor">Flagship</span>
+            <span class="dog-tag">HW-01</span>
+          </div>
+          <h2 class="mt-6 font-stencil text-3xl text-white">SP-700 Payment Terminal</h2>
+          <p class="mt-4 text-lg leading-relaxed text-smoke">
+            The SP-700 is our countertop payment terminal built around a secure enclave
+            processor. Like the field radios that kept soldiers connected in the jungle, it
+            processes transactions locally — no data ever leaves the device unencrypted.
+          </p>
+
+          <div
+            class="mt-8"
+            hx-get="/partials/device-terminal.html"
+            hx-trigger="revealed"
+            hx-swap="innerHTML"
+          >
+            <div class="space-y-3">
+              <div class="dossier-line flex justify-between text-sm">
+                <span class="font-mono text-khaki">MODEL</span>
+                <span class="text-smoke">SP-700</span>
+              </div>
+              <!-- <div class="dossier-line flex justify-between text-sm">
+                <span class="font-mono text-khaki">PROCESSOR</span>
+                <span class="text-smoke">Secure Enclave ARM Cortex-A72</span>
+              </div>
+              <div class="dossier-line flex justify-between text-sm">
+                <span class="font-mono text-khaki">DISPLAY</span>
+                <span class="text-smoke">4.3" IPS 480x272 Tactical</span>
+              </div> -->
+              <div class="dossier-line flex justify-between text-sm">
+                <span class="font-mono text-khaki">PAYMENTS</span>
+                <span class="text-smoke">NFC / EMV Chip / Magnetic / Crypto</span>
+              </div>
+              <!-- <div class="dossier-line flex justify-between text-sm">
+                <span class="font-mono text-khaki">CONNECTIVITY</span>
+                <span class="text-smoke">Ethernet / Wi-Fi / LTE / Offline</span>
+              </div>
+              <div class="dossier-line flex justify-between text-sm">
+                <span class="font-mono text-khaki">ENCRYPTION</span>
+                <span class="text-smoke">AES-256-GCM / E2E / PCI-DSS L1</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="font-mono text-khaki">POWER</span>
+                <span class="text-smoke">USB-C / PoE / Battery Backup</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative overflow-hidden border-b border-olive/20 bg-midnight py-24" id="white-label-app" aria-label="White Label Payment App">
+    <img
+      src="/hangingOut.jpg"
+      alt=""
+      class="war-photo-bg"
+      loading="lazy"
+      aria-hidden="true"
+    />
+    <div class="war-photo-overlay" aria-hidden="true"></div>
+
+    <div class="relative z-10 mx-auto max-w-7xl px-6">
+      <div class="grid items-center gap-16 lg:grid-cols-2">
+        <div class="order-2 lg:order-1">
+          <div class="flex items-center gap-3">
+            <span class="stamp-classified text-xs text-amber">White Label</span>
+            <span class="dog-tag">WL-01</span>
+          </div>
+          <h2 class="mt-6 font-stencil text-3xl text-white">White Label Payment App</h2>
+          <p class="mt-4 text-lg leading-relaxed text-bone/90">
+            A fully branded mobile payment app deployed under your name. Your logo, your
+            colors, your app store listing — powered by SWAMP PAY's zero-knowledge
+            architecture. NFC tap-to-pay and crypto wallet support built in.
+          </p>
+
+          <div class="mt-8 space-y-3">
+            <div class="dossier-line flex justify-between text-sm">
+              <span class="font-mono text-khaki">PLATFORMS</span>
+              <span class="text-smoke">iOS / Android</span>
+            </div>
+            <div class="dossier-line flex justify-between text-sm">
+              <span class="font-mono text-khaki">BRANDING</span>
+              <span class="text-smoke">Logo / Colors / Name / Splash</span>
+            </div>
+            <div class="dossier-line flex justify-between text-sm">
+              <span class="font-mono text-khaki">PAYMENTS</span>
+              <span class="text-smoke">NFC Tap-to-Pay / Crypto Wallets</span>
+            </div>
+            <div class="dossier-line flex justify-between text-sm">
+              <span class="font-mono text-khaki">CRYPTO</span>
+              <span class="text-smoke">BTC / ETH / USDC / XMR</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <div class="flex items-center justify-center rounded border border-olive/20 bg-midnight/70 p-16 backdrop-blur-sm">
+            <div class="text-center" aria-hidden="true">
+              <div class="mx-auto flex h-72 w-36 flex-col items-center justify-between rounded-3xl border border-olive/30 bg-midnight/80 p-4">
+                <div class="h-1.5 w-14 rounded-full bg-olive/30"></div>
+                <div class="space-y-3 text-center">
+                  <div class="h-4 w-16 mx-auto rounded-sm bg-phosphor/20"></div>
+                  <div class="flex h-14 w-14 mx-auto items-center justify-center rounded-full border-2 border-phosphor/30 bg-jungle/10">
+                    <span class="font-stencil text-[10px] text-phosphor/60">YOUR<br/>LOGO</span>
+                  </div>
+                  <p class="font-stencil text-[9px] text-phosphor/50">TAP TO PAY</p>
+                </div>
+                <div class="h-1 w-8 rounded-full bg-olive/30"></div>
+              </div>
+              <p class="mt-6 font-stencil text-xs text-khaki/60">YOUR BRAND // POWERED BY SWAMP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="bg-bunker py-24" aria-label="FAQ">
+    <div class="mx-auto max-w-3xl px-6">
+      <p class="section-label-military">Field Intelligence — FAQ</p>
+      <h2 class="font-stencil text-3xl text-white">Device Intel</h2>
+
+      <div
+        class="mt-12 space-y-2"
+        hx-get="/partials/device-faq.html"
+        hx-trigger="revealed"
+        hx-swap="innerHTML"
+      >
+        <div x-data="{ open: false }" class="border border-olive/15 rounded">
+          <button @click="open = !open" class="flex w-full items-center justify-between px-6 py-4 text-left font-stencil text-sm text-white hover:text-phosphor transition-colors" :aria-expanded="open">
+            Does the SP-700 require internet connectivity?
+            <span class="font-mono text-phosphor transition-transform" :class="open ? 'rotate-45' : ''" aria-hidden="true">+</span>
+          </button>
+          <div x-show="open" x-collapse class="px-6 pb-4 text-sm text-smoke">
+            No. The SP-700 processes all transactions locally. Internet is only needed for optional real-time settlement.
+          </div>
+        </div>
+
+        <div x-data="{ open: false }" class="border border-olive/15 rounded">
+          <button @click="open = !open" class="flex w-full items-center justify-between px-6 py-4 text-left font-stencil text-sm text-white hover:text-phosphor transition-colors" :aria-expanded="open">
+            What crypto wallets are supported?
+            <span class="font-mono text-phosphor transition-transform" :class="open ? 'rotate-45' : ''" aria-hidden="true">+</span>
+          </button>
+          <div x-show="open" x-collapse class="px-6 pb-4 text-sm text-smoke">
+            Any wallet that supports NFC-based payment protocols. Bitcoin (Lightning), Ethereum (and L2s), USDC, and Monero.
+          </div>
+        </div>
+
+        <div x-data="{ open: false }" class="border border-olive/15 rounded">
+          <button @click="open = !open" class="flex w-full items-center justify-between px-6 py-4 text-left font-stencil text-sm text-white hover:text-phosphor transition-colors" :aria-expanded="open">
+            How is the firmware secured?
+            <span class="font-mono text-phosphor transition-transform" :class="open ? 'rotate-45' : ''" aria-hidden="true">+</span>
+          </button>
+          <div x-show="open" x-collapse class="px-6 pb-4 text-sm text-smoke">
+            The SP-700 runs on a hardware secure enclave with a root of trust. Firmware updates are cryptographically signed and verified before installation. The device includes anti-tamper detection that triggers key erasure if physical compromise is attempted.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+</Base>

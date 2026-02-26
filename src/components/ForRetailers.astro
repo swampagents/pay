@@ -1,0 +1,38 @@
+---
+const benefits = [
+  { metric: '0%', label: 'Data Liability', detail: 'No customer data stored. Nothing to steal.' },
+  { metric: '0.5%', label: 'Processing Fee', detail: 'Flat rate. No hidden charges. No surprises.' },
+  { metric: '<2s', label: 'Transaction Time', detail: 'Tap, process, settle. Built for the field.' },
+  { metric: '99.9%', label: 'Uptime', detail: 'Offline-capable. Works in the jungle.' },
+];
+---
+<section class="relative border-t border-olive/20 bg-midnight py-28" aria-label="For retailers">
+  <div class="topo-lines absolute inset-0" aria-hidden="true"></div>
+
+  <div class="relative z-10 mx-auto max-w-7xl px-6">
+    <div class="grid items-center gap-16 lg:grid-cols-2">
+      <div>
+        <p class="section-label-military">Forward Operating Base — Merchant Division</p>
+        <h2 class="font-stencil text-3xl tracking-wide text-white sm:text-4xl">
+          Your store is your<br />
+          <span class="text-amber crt-glow-amber">firebase</span>.
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed text-bone/90">
+          SWAMP PAY eliminates the surveillance tax. No customer tracking, no data selling,
+          no compliance theater. Hold the line.
+        </p>
+        <a href="/devices" class="btn-amber mt-8 inline-flex">Request Field Kit &rarr;</a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        {benefits.map(({ metric, label, detail }) => (
+          <div class="rounded border border-olive/20 bg-bunker/70 p-6">
+            <p class="font-stencil text-3xl text-phosphor crt-glow">{metric}</p>
+            <p class="mt-2 font-stencil text-xs uppercase tracking-wider text-white">{label}</p>
+            <p class="mt-2 text-xs leading-relaxed text-smoke">{detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

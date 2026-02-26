@@ -1,0 +1,7 @@
+{
+  "label": "MOBILE",
+  "title": "Tap-to-Pay",
+  "description": "NFC-enabled mobile payments. Customers tap their device — no apps, no accounts, no tracking. The transaction stays between parties.",
+  "icon": "◇",
+  "order": 2
+}

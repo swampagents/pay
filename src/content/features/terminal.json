@@ -1,0 +1,7 @@
+{
+  "label": "TERMINAL",
+  "title": "Dedicated Hardware",
+  "description": "Purpose-built payment terminals with hardened firmware. No cloud dependency. Process transactions on-device with military-grade encryption.",
+  "icon": "⬡",
+  "order": 1
+}

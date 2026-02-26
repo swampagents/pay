@@ -1,0 +1,90 @@
+---
+const phrases = [
+  'FIREBASE SWAMP — RECEIVING...',
+  'BRAVO-SEVEN-NINER [VERIFIED]',
+  'PERIMETER SECURE',
+  'COMMS CHANNEL ENCRYPTED',
+  'CHARLIE MIKE ////',
+];
+---
+<section class="relative flex min-h-screen items-center overflow-hidden bg-midnight" aria-label="Hero">
+  <img
+    src="/vietnamePic.jpg"
+    alt=""
+    class="war-photo-bg-hero"
+    style="transform: scaleX(-1);"
+    loading="eager"
+    aria-hidden="true"
+  />
+  <div class="war-photo-overlay-light" aria-hidden="true"></div>
+  <div class="film-grain absolute inset-0 z-[2]" aria-hidden="true"></div>
+
+  <div class="absolute right-6 top-1/2 z-[3] -translate-y-1/2 sm:right-10 lg:right-16" aria-hidden="true">
+    <span class="stamp-classified block rotate-90 origin-center text-2xl text-napalm/25 sm:text-3xl lg:text-4xl">Classified</span>
+  </div>
+
+  <div class="relative z-10 mx-auto w-full max-w-7xl px-6">
+    <div class="max-w-3xl">
+      <h1 class="font-stencil text-6xl leading-[1.1] tracking-wide text-white sm:text-7xl lg:text-8xl">
+        Welcome<br />
+        to the<br />
+        <span class="text-phosphor crt-glow">SWAMP</span>.
+      </h1>
+
+      <p class="mt-8 max-w-lg text-xl leading-relaxed text-bone/90">
+        Sovereign payment infrastructure for operators behind enemy lines.
+        No surveillance. No data trails. No retreat.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="/devices" class="btn-primary">
+          Request Field Kit
+        </a>
+        <a href="/white-label" class="btn-secondary">
+          White Label &rarr;
+        </a>
+      </div>
+
+      <div class="mt-12 border-t border-khaki/15 pt-6">
+        <div
+          class="font-mono text-xs leading-relaxed text-phosphor/80"
+          x-data={`{
+            lines: ${JSON.stringify(phrases)},
+            displayed: [],
+            current: '',
+            lineIndex: 0,
+            charIndex: 0,
+            init() { this.typeNext(); },
+            typeNext() {
+              if (this.lineIndex >= this.lines.length) { this.lineIndex = 0; this.displayed = []; }
+              const line = this.lines[this.lineIndex];
+              if (this.charIndex <= line.length) {
+                this.current = line.slice(0, this.charIndex);
+                this.charIndex++;
+                setTimeout(() => this.typeNext(), 35 + Math.random() * 35);
+              } else {
+                this.displayed.push(this.current);
+                this.current = '';
+                this.charIndex = 0;
+                this.lineIndex++;
+                setTimeout(() => this.typeNext(), 600);
+              }
+            }
+          }`}
+        >
+          <div class="flex flex-wrap gap-x-6 gap-y-1">
+            <template x-for="(line, i) in displayed" :key="i">
+              <span>
+                <span class="text-phosphor-dim">$</span> <span x-text="line"></span>
+              </span>
+            </template>
+            <span x-show="current !== ''">
+              <span class="text-phosphor-dim">$</span> <span x-text="current"></span><span class="terminal-cursor"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
