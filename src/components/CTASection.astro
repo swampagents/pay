@@ -1,3 +1,6 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
 <section class="relative overflow-hidden border-t border-olive/20 bg-jungle/20 py-32" aria-label="Call to action">
   <div class="tactical-grid-dense absolute inset-0 opacity-40" aria-hidden="true"></div>
   <div class="absolute inset-0 bg-gradient-to-r from-midnight/80 via-transparent to-midnight/80 z-[1]" aria-hidden="true"></div>
@@ -16,8 +19,8 @@
       Stop feeding the surveillance machine. Charlie Mike.
     </p>
     <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-      <a href={`${import.meta.env.BASE_URL}/devices`} class="btn-primary">Request Field Kit</a>
-      <a href={`${import.meta.env.BASE_URL}/white-label`} class="btn-secondary">White Label</a>
+      <a href={`${base}/devices`} class="btn-primary">Request Field Kit</a>
+      <a href={`${base}/white-label`} class="btn-secondary">White Label</a>
     </div>
   </div>
 </section>

@@ -4,7 +4,7 @@ import Base from '../layouts/Base.astro';
 <Base title="Dossier — SWAMP PAY" description="The mission and personnel behind SWAMP PAY sovereign payment terminals.">
   <section class="relative min-h-[60vh] overflow-hidden border-b border-olive/20 bg-midnight pt-24 pb-24">
     <img
-      src={`${import.meta.env.BASE_URL}/base.jpg`}
+      src={`${(import.meta.env.BASE_URL).replace(/\/$/, '')}/base.jpg`}
       alt=""
       class="war-photo-bg-hero"
       style="object-position: center 40%;"
@@ -95,15 +95,15 @@ import Base from '../layouts/Base.astro';
       <div class="mt-12 grid gap-4 sm:grid-cols-3">
         <div class="rounded border border-olive/20 bg-midnight/60 p-6">
           <p class="font-stencil text-xs text-khaki">GENERAL</p>
-          <p class="mt-2 font-mono text-sm text-phosphor">hello@swamppay.com</p>
+          <p class="mt-2 font-mono text-sm text-phosphor">hello@swamppay.io</p>
         </div>
         <div class="rounded border border-olive/20 bg-midnight/60 p-6">
           <p class="font-stencil text-xs text-khaki">SIGNALS CORPS</p>
-          <p class="mt-2 font-mono text-sm text-phosphor">dev@swamppay.com</p>
+          <p class="mt-2 font-mono text-sm text-phosphor">dev@swamppay.io</p>
         </div>
         <div class="rounded border border-olive/20 bg-midnight/60 p-6">
           <p class="font-stencil text-xs text-khaki">OPSEC</p>
-          <p class="mt-2 font-mono text-sm text-phosphor">security@swamppay.com</p>
+          <p class="mt-2 font-mono text-sm text-phosphor">security@swamppay.io</p>
         </div>
       </div>
 

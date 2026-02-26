@@ -28,7 +28,7 @@ const features = [
 ---
 <section class="relative overflow-hidden border-t border-olive/20 bg-bunker py-28" id="features" aria-label="Product overview">
   <img
-    src={`${import.meta.env.BASE_URL}/base.jpg`}
+    src={`${(import.meta.env.BASE_URL).replace(/\/$/, '')}/base.jpg`}
     alt=""
     class="war-photo-bg"
     style="object-position: center 35%;"
