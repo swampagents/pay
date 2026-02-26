@@ -1,15 +1,15 @@
-# SWAMP PAY — Marketing Website
+# SWAMP pay — Marketing Website
 
 Privacy-first payment terminal marketing site built with the **AHA stack**: Astro + HTMX + Alpine.js, styled with TailwindCSS.
 
-## Stack
+## AHA Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
+| UI State | **Alpine.js** | Nav toggle, tabs, accordion, small reactive state |
+| Interactivity | **HTMX** | Partial page updates, dynamic content loading |
 | Framework | **Astro** | Routing, layouts, static generation, content collections |
 | Styling | **TailwindCSS v4** | Utility-first CSS with custom design tokens |
-| Interactivity | **HTMX** | Partial page updates, dynamic content loading |
-| UI State | **Alpine.js** | Nav toggle, tabs, accordion, small reactive state |
 
 Zero client-side SPA architecture. Progressive enhancement throughout.
 
