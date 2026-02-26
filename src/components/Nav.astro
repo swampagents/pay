@@ -1,16 +1,18 @@
 ---
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { href: '/', label: 'HQ' },
-  { href: '/devices', label: 'Field Kit' },
-  { href: '/privacy', label: 'OPSEC' },
-  { href: '/white-label', label: 'White Label' },
-  { href: '/about', label: 'Dossier' },
+  { href: `${base}/`, label: 'HQ' },
+  { href: `${base}/devices`, label: 'Field Kit' },
+  { href: `${base}/privacy`, label: 'OPSEC' },
+  { href: `${base}/white-label`, label: 'White Label' },
+  { href: `${base}/about`, label: 'Dossier' },
 ];
-const currentPath = Astro.url.pathname;
+const norm = (p: string) => p.replace(/\/$/, '') || '/';
+const currentPath = norm(Astro.url.pathname);
 ---
 <div x-data="{ open: false, scrolled: false }" @scroll.window="scrolled = window.scrollY > 80">
   <a
-    href="/"
+    href={`${base}/`}
     class="fixed left-6 top-5 z-50 flex items-center gap-2 rounded-full px-3 py-1.5 text-phosphor crt-glow transition-all duration-300"
     :class="scrolled ? 'bg-midnight/80 backdrop-blur-sm border border-olive/20' : ''"
     aria-label="SWAMP PAY home"
@@ -63,10 +65,10 @@ const currentPath = Astro.url.pathname;
               href={href}
               class:list={[
                 'block font-stencil text-4xl uppercase tracking-wider transition-colors hover:text-phosphor sm:text-5xl',
-                currentPath === href ? 'text-phosphor crt-glow' : 'text-bone/60',
+                currentPath === norm(href) ? 'text-phosphor crt-glow' : 'text-bone/60',
               ]}
               @click="open = false"
-              aria-current={currentPath === href ? 'page' : undefined}
+              aria-current={currentPath === norm(href) ? 'page' : undefined}
             >
               {label}
             </a>
@@ -76,7 +78,7 @@ const currentPath = Astro.url.pathname;
 
       <div class="barbed-wire mx-auto mt-12 w-48"></div>
 
-      <a href="/devices" class="btn-primary mt-8 inline-flex" @click="open = false">Request Field Kit</a>
+      <a href={`${base}/devices`} class="btn-primary mt-8 inline-flex" @click="open = false">Request Field Kit</a>
 
       <p class="mt-8 font-mono text-[10px] text-khaki/30">UNCLASSIFIED // FOUO</p>
     </div>
