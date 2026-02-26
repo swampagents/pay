@@ -1,10 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL;
 ---
 <Base title="Field Kit — SWAMP PAY" description="Purpose-built payment terminals and mobile tap-to-pay. Hardened field equipment for sovereign commerce.">
   <section class="relative min-h-[60vh] overflow-hidden border-b border-olive/20 bg-midnight pt-24 pb-24">
     <img
-      src="/fieldKit.jpg"
+      src={`${base}/fieldKit.jpg`}
       alt=""
       class="war-photo-bg-hero"
       style="object-position: center 30%;"
@@ -64,7 +65,7 @@ import Base from '../layouts/Base.astro';
 
           <div
             class="mt-8"
-            hx-get="/partials/device-terminal.html"
+            hx-get={`${base}/partials/device-terminal.html`}
             hx-trigger="revealed"
             hx-swap="innerHTML"
           >
@@ -106,7 +107,7 @@ import Base from '../layouts/Base.astro';
 
   <section class="relative overflow-hidden border-b border-olive/20 bg-midnight py-24" id="white-label-app" aria-label="White Label Payment App">
     <img
-      src="/hangingOut.jpg"
+      src={`${base}/hangingOut.jpg`}
       alt=""
       class="war-photo-bg"
       loading="lazy"
@@ -178,7 +179,7 @@ import Base from '../layouts/Base.astro';
 
       <div
         class="mt-12 space-y-2"
-        hx-get="/partials/device-faq.html"
+        hx-get={`${base}/partials/device-faq.html`}
         hx-trigger="revealed"
         hx-swap="innerHTML"
       >
