@@ -3,8 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://swampagents.github.io',
-  base: '/pay',
+  site: 'https://swamppay.com',
   vite: {
     plugins: [tailwindcss()],
     server: {
